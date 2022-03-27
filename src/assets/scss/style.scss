@@ -119,6 +119,7 @@ body {
             left: 0;
             top: 30px;
         }
+        
     }
 }
 
@@ -132,7 +133,18 @@ body {
     @media (max-width: 550px) { 
         margin-left: -50px;
     }
+    .table_active {
+        top: -10px !important; 
+    }
+   
 }
+
+// img[data-moving-part] {
+//     top: 40px;
+//     left: 50px;
+// }
+
+
 
 .table__header {
     grid-area: b;
@@ -181,6 +193,8 @@ body {
     width: 475px;
     bottom: 200px;
     left: 230px;
+    -webkit-tap-highlight-color: transparent;
+   
     @media (max-width: 1560px) { 
         width: 335px;
         left: 180px;
@@ -202,6 +216,13 @@ body {
         border-width: 0px;
         font-size: 4rem;
         background-color: rgba(166, 255, 255, 1);
+        transition: linear .2s;
+        &:hover {
+            background-color: rgb(35, 216, 156);
+        }
+        &:active {
+            background-color: rgb(0, 56, 37);
+        }
         @media (max-width: 1560px) { 
             width: 150px;
             height: 150px;
@@ -253,7 +274,7 @@ body {
     }
 }
 
-.yamaguchi-header {
+.control__title {
     grid-area: a;
     @include montserrat;
     font-size: 5.6rem;
@@ -262,14 +283,17 @@ body {
     margin-top: 72px;
     margin-left:  100px;
     @media (max-width: 1850px) {
+        // margin-right: 20px;
+        margin-bottom: 34px;
         margin-left:  20px;
     }
     @media (max-width: 700px) {
+        margin-top: 18px;
         font-size: 3.4rem;
     }
 }
 
-.yamaguchi__description {
+.control__description {
     grid-area: b;
     @include montserrat;
     font-weight: 400;
@@ -280,10 +304,11 @@ body {
     max-width: 586px;
     @media (max-width: 1850px) {
         margin-left:  20px;
+        margin-right: 20px;
     }
 }
 
-.yamaguchi__command {
+.control__command {
     grid-area: c;
     @include montserrat;
     font-weight: 900;
@@ -319,7 +344,7 @@ body {
     }
 }
 
-.yamaguchi__levitate {
+.control__levitate {
     grid-area: d;
     display: flex;
     position: relative;
@@ -379,7 +404,7 @@ body {
     transition: linear .6s;
 }
 
-.yamaguchi__interface {
+.control__interface {
     max-width: 820px;
     grid-area: e;
     @media (max-width: 1850px) {

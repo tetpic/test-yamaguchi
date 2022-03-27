@@ -5,10 +5,10 @@ function moveTable() {
     let downButton = document.querySelector('.table__button_down')
     if (upperTablePart) {
         upButton.addEventListener('click', () => {
-            upperTablePart.style.top = '-5%'
+            upperTablePart.classList.add('table_active')
         })
         downButton.addEventListener('click', () => {
-            upperTablePart.style.top = '5%'
+            upperTablePart.classList.remove('table_active')
         })
     }
 }
@@ -16,7 +16,7 @@ moveTable()
 
 
 function girlAppearance() {
-    let levitateSection = document.querySelector('.yamaguchi__levitate')
+    let levitateSection = document.querySelector('.control__levitate')
     let blackHole = levitateSection.querySelector('.black-hole')
     let effectShadow = levitateSection.querySelector('.effect__shadow')
     let flyingGirl = levitateSection.querySelector('img')
